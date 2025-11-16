@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Role ATS Analyzer</title>
+    <link rel="stylesheet" href="resume.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Career Role Based ATS Analyzer</h1>
+    <p>Select a job role and upload your resume to get ATS score, skills match & roadmap.</p>
+
+    <h2>Choose a Role</h2>
+    <div id="roles" class="role-list"></div>
+
+    <div class="upload-box hidden" id="uploadSection">
+        <h3 id="roleTitle"></h3>
+        <input type="file" id="resumeFile" accept="application/pdf">
+        <button onclick="analyzeResume()">Analyze Resume</button>
+    </div>
+
+    <div id="result" class="hidden result-box">
+        <h2>ATS Score: <span id="score"></span>/100</h2>
+
+        <canvas id="skillChart" width="300" height="300"></canvas>
+
+        <h3>Matched Skills</h3>
+        <p id="matched"></p>
+
+        <h3>Missing Skills</h3>
+        <p id="missing"></p>
+
+        <h3>Career Roadmap</h3>
+        <ul id="roadmap"></ul>
+    </div>
+</div>
+
+<script src="resume.js"></script>
+</body>
+</html>
