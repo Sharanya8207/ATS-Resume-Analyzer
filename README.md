@@ -83,6 +83,7 @@ CSS3	Styling, responsive design, hover effects
 JavaScript (ES6)	Core application logic, skill matching, event handling
 PDF.js	Extract text from uploaded PDF resumes
 Chart.js	Visual representation of matched/missing skills with pie charts
+
 📋 How It Works
 
 User selects a job role.
