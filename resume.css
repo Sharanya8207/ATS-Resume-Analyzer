@@ -1,0 +1,63 @@
+body {
+    font-family: Arial;
+    background: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #888;
+}
+
+.role-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.role-card {
+    background: #0078ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.role-card:hover {
+    background: #005bcc;
+    transform: scale(1.05);
+}
+
+.upload-box, .result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f7f9fc;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005bcc;
+}
+
+.hidden {
+    display: none;
+}
