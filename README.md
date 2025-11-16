@@ -1,12 +1,14 @@
 Career Role Based ATS Resume Analyzer
 
-A smart, frontend-based ATS (Applicant Tracking System) tool that analyzes resumes against multiple tech job roles.
-Built completely using HTML, CSS, JavaScript, PDF.js, and Chart.js, this application helps users understand how well their resume matches a selected career path, along with skill insights and a personalized roadmap.
+A frontend-based, intelligent ATS (Applicant Tracking System) tool that analyzes user resumes against multiple tech job roles.
+Built using HTML, CSS, JavaScript, PDF.js, and Chart.js, this project helps candidates understand their strengths, missing skills, ATS compatibility, and provides a clear career roadmap.
+
+This project is ideal for final-year students, job seekers, and developers who want to demonstrate practical frontend skills, problem-solving, and career-focused application development.
 
 🚀 Key Features
 🔹 Multiple Job Roles
 
-Choose from roles such as:
+Select from various in-demand roles:
 
 Frontend Developer
 
@@ -24,52 +26,75 @@ AI Engineer
 
 Machine Learning Engineer
 
-Each role contains a predefined skill set and career roadmap.
+Each role has a predefined skill set and a career roadmap.
 
 🔹 Resume Upload & Text Extraction
 
-Upload resumes in PDF format
+Upload PDF resumes directly from your device.
 
-Extract text using PDF.js
+Extracts text from the PDF using PDF.js.
 
-Converts resume data into clean, analyzable text
+Converts resume data into a clean, analyzable format for skill matching.
 
-🔹 Skill Matching Engine
+🔹 Skill Matching & ATS Score
 
-The system automatically:
+Compares required skills for the selected role with your resume content.
 
-Detects matched skills
+Detects matched skills and highlights missing skills.
 
-Highlights missing skills
+Calculates ATS compatibility score (0–100) based on skill coverage.
 
-Calculates ATS Score based on role requirements
+Enables candidates to identify gaps before applying for jobs.
 
-🔹 Interactive Pie Chart
+🔹 Interactive Visualization
 
-Uses Chart.js to visually represent:
+Displays pie charts using Chart.js for easy visual representation of:
 
 Matched skills
 
 Missing skills
 
-This makes the analysis easy to understand at a glance.
+Makes results intuitive and easy to understand at a glance.
 
-🔹 Career Roadmap
+🔹 Personalized Career Roadmap
 
-Each job role includes a step-by-step learning plan:
+Provides step-by-step guidance for each role:
 
 Skills to learn
 
 Tools to master
 
-Real projects to build
+Projects to build
 
-A great feature for students & job seekers.
+Helps candidates plan their learning and career growth effectively.
+
+🔹 User-Friendly Interface
+
+Clean and responsive UI with cards and buttons.
+
+Hover animations and grid layout for roles.
+
+Interactive experience without backend requirements — works entirely on the frontend.
 
 🛠 Technologies Used
 Technology	Purpose
-HTML5	Page structure
-CSS3	Styling & responsive layout
-JavaScript (ES6)	Core logic
-PDF.js	PDF text extraction
-Chart.js	Data visualization
+HTML5	Page structure and semantic content
+CSS3	Styling, responsive design, hover effects
+JavaScript (ES6)	Core application logic, skill matching, event handling
+PDF.js	Extract text from uploaded PDF resumes
+Chart.js	Visual representation of matched/missing skills with pie charts
+📋 How It Works
+
+User selects a job role.
+
+Uploads resume in PDF format.
+
+PDF.js extracts all text from the resume.
+
+System compares resume content with predefined skills for the role.
+
+ATS score is calculated based on matched vs missing skills.
+
+Matched and missing skills are displayed along with an interactive pie chart.
+
+Career roadmap for the role is displayed for further guidance.
