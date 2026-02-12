@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career Role ATS Analyzer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATS Resume Analyzer</title>
+
   <link rel="stylesheet" href="resume.css">
 
   <!-- PDF.js -->
@@ -11,48 +12,40 @@
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- html2pdf.js for export -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
 <div class="container">
-  <h1>Career Role Based ATS Analyzer</h1>
-  <p>Select a job role or upload a job description, then upload your resume to get ATS score, matched skills & roadmap.</p>
+  <h1>ATS Resume Analyzer</h1>
+  <p>Upload Job Description & Resume to calculate ATS score</p>
 
-  <h2>Choose a Role</h2>
-  <div id="roles" class="role-list"></div>
+  <!-- Job Description -->
+  <h2>Job Description</h2>
 
-  <h2>Or Upload Job Description (PDF)</h2>
   <input type="file" id="jdFile" accept="application/pdf">
-  <button onclick="extractJD()">Use this JD</button>
+  <button onclick="extractJD()">Upload JD PDF</button>
 
-  <h2>Or Paste Job Description</h2>
-  <textarea id="jdText" rows="6" cols="60" placeholder="Paste JD here..."></textarea>
-  <button onclick="useJDText()">Use this JD</button>
+  <textarea id="jdText" placeholder="OR paste Job Description here..."></textarea>
+  <button onclick="useJDText()">Use Pasted JD</button>
 
-  <div class="upload-box hidden" id="uploadSection">
-    <h3 id="roleTitle"></h3>
+  <!-- Resume Upload -->
+  <div class="upload-box hidden" id="resumeSection">
+    <h2>Upload Resume</h2>
     <input type="file" id="resumeFile" accept="application/pdf">
     <button onclick="analyzeResume()">Analyze Resume</button>
   </div>
 
-  <div id="result" class="hidden result-box">
+  <!-- Results -->
+  <div id="result" class="result-box hidden">
     <h2>ATS Score: <span id="score"></span>/100</h2>
 
-    <canvas id="skillChart" width="300" height="300"></canvas>
+    <canvas id="skillChart"></canvas>
 
     <h3>Matched Skills</h3>
-    <p id="matched"></p>
+    <div id="matched"></div>
 
     <h3>Missing Skills</h3>
-    <p id="missing"></p>
-
-    <h3>Career Roadmap</h3>
-    <ul id="roadmap"></ul>
-
-    <button onclick="exportReport()">Download Report as PDF</button>
+    <div id="missing"></div>
   </div>
 </div>
 
